@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Geologica";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--middleground);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--foreground);
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+
+:root {
+    --background: #101010;
+    --middleground: #666666;
+    --foreground: #929292;
+    --text: white;
+}

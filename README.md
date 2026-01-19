@@ -1,7 +1,13 @@
 # GO-DO-LIST
 
+Um projeto de estudos de uma To-Do-List com uma arquitetura profissional usando Go + PostgreSQL + Next.js.<br/>
+Este repositório tem foco em arquitetura limpa, boas práticas, drag-and-drop, ordenação de dados, e foi desenvolvido sem fins lucrativos.
+
 ## Objetivos
 
+- Autenticação com JWT;
+- Criação de boards, colunas dinâmicas, cards com drag-and-drop, labels e etc;
+- Colaboração em tempo real (WebSocket);
 
 ## Dependências
 
