@@ -7,7 +7,8 @@ Este repositório tem foco em arquitetura limpa, boas práticas, drag-and-drop, 
 
 - Autenticação com JWT;
 - Criação de boards, colunas dinâmicas, cards com drag-and-drop, labels e etc;
-- Colaboração em tempo real (WebSocket);
+- Desenvolver um ambiente com PostgreSQL;
+- Colaboração em tempo real (WebSocket).
 
 ## Dependências
 
