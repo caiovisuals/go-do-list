@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Geologica } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 
 const geologica = Geologica({
@@ -8,13 +9,18 @@ const geologica = Geologica({
 })
 
 export const metadata: Metadata = {
-    title: "go-do-list",
-    description: "To-do list usando React e Go!",
+    title: "Go do List",
+    description: "To-do list usando React/NextJS, Ws e Golang!",
 }
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="pt-br">
+            <head>
+                <Script 
+                    id=""
+                />
+            </head>
             <body className={`${geologica.variable} antialiased`}>
                 {children}
             </body>

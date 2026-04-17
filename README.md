@@ -3,6 +3,10 @@
 Um projeto de estudos de uma To-Do-List com uma arquitetura profissional usando Go + PostgreSQL + Next.js.<br/>
 Este repositório tem foco em arquitetura limpa, boas práticas, drag-and-drop, ordenação de dados, e foi desenvolvido sem fins lucrativos.
 
+## Capturas de Tela
+
+<img src="/public/screenshots/" alt="" >
+
 ## Objetivos
 
 - Autenticação com JWT;
@@ -14,7 +18,9 @@ Este repositório tem foco em arquitetura limpa, boas práticas, drag-and-drop, 
 
 O projeto foi desenvolvido com as seguintes dependências:
 
-- **[]()** – ^1
+- **[NextJs](https://nextjs.org)** – ^16.1.3
+- **[Golang](https://go.dev)** – ^
+- **[Ws]()** – ^
 
 by caiothevisual  
 #caiobavisuals #golang #godolist #nextjs #fullstack #todolist
