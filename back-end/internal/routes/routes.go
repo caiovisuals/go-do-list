@@ -25,15 +25,15 @@ func SetupRoutes(db *sql.DB) http.Handler {
 
 	// Services
 	authSvc := services.NewAuthService(db)
-	boardSvc := services.NewBoardService(db)
-	colSvc := services.NewColumnService(db)
-	cardSvc := services.NewCardService(db)
+	// boardSvc := services.NewBoardService(db)
+	// colSvc := services.NewColumnService(db)
+	// cardSvc := services.NewCardService(db)
 
 	// Controllers
 	authCtrl := controllers.NewAuthController(authSvc)
-	boardCtrl := controllers.NewBoardController(boardSvc, hub)
-	colCtrl := controllers.NewColumnController(colSvc, boardSvc, hub)
-	cardCtrl := controllers.NewCardController(cardSvc, boardSvc, hub)
+	// boardCtrl := controllers.NewBoardController(boardSvc, hub)
+	// colCtrl := controllers.NewColumnController(colSvc, boardSvc, hub)
+	// cardCtrl := controllers.NewCardController(cardSvc, boardSvc, hub)
 
 	// Auth routes (public)
 	r.Post("/auth/register", authCtrl.Register)
@@ -50,28 +50,28 @@ func SetupRoutes(db *sql.DB) http.Handler {
 
 		r.Get("/me", authCtrl.Me)
 
-		r.Get("/boards", boardCtrl.ListBoards)
-		r.Post("/boards", boardCtrl.CreateBoard)
-		r.Get("/boards/{id}", boardCtrl.GetBoardDetail)
-		r.Patch("/boards/{id}", boardCtrl.UpdateBoard)
-		r.Delete("/boards/{id}", boardCtrl.DeleteBoard)
+		// r.Get("/boards", boardCtrl.ListBoards)
+		// r.Post("/boards", boardCtrl.CreateBoard)
+		// r.Get("/boards/{id}", boardCtrl.GetBoardDetail)
+		// r.Patch("/boards/{id}", boardCtrl.UpdateBoard)
+		// r.Delete("/boards/{id}", boardCtrl.DeleteBoard)
 
-		r.Get("/boards/{id}/labels", boardCtrl.ListLabels)
-		r.Post("/boards/{id}/labels", boardCtrl.CreateLabel)
-		r.Delete("/boards/{id}/labels/{labelId}", boardCtrl.DeleteLabel)
+		// r.Get("/boards/{id}/labels", boardCtrl.ListLabels)
+		// r.Post("/boards/{id}/labels", boardCtrl.CreateLabel)
+		// r.Delete("/boards/{id}/labels/{labelId}", boardCtrl.DeleteLabel)
 
-		r.Post("/boards/{id}/columns", colCtrl.CreateColumn)
-		r.Patch("/boards/{id}/columns/reorder", colCtrl.ReorderColumns)
-		r.Patch("/boards/{id}/columns/{colId}", colCtrl.UpdateColumn)
-		r.Delete("/boards/{id}/columns/{colId}", colCtrl.DeleteColumn)
+		// r.Post("/boards/{id}/columns", colCtrl.CreateColumn)
+		// r.Patch("/boards/{id}/columns/reorder", colCtrl.ReorderColumns)
+		// r.Patch("/boards/{id}/columns/{colId}", colCtrl.UpdateColumn)
+		// r.Delete("/boards/{id}/columns/{colId}", colCtrl.DeleteColumn)
 
-		r.Post("/boards/{id}/columns/{colId}/cards", cardCtrl.CreateCard)
-		r.Patch("/boards/{id}/cards/{cardId}", cardCtrl.UpdateCard)
-		r.Delete("/boards/{id}/cards/{cardId}", cardCtrl.DeleteCard)
-		r.Patch("/boards/{id}/cards/{cardId}/move", cardCtrl.MoveCard)
+		// r.Post("/boards/{id}/columns/{colId}/cards", cardCtrl.CreateCard)
+		// r.Patch("/boards/{id}/cards/{cardId}", cardCtrl.UpdateCard)
+		// r.Delete("/boards/{id}/cards/{cardId}", cardCtrl.DeleteCard)
+		// r.Patch("/boards/{id}/cards/{cardId}/move", cardCtrl.MoveCard)
 
-		r.Post("/boards/{id}/cards/{cardId}/labels/{labelId}", cardCtrl.AddLabel)
-		r.Delete("/boards/{id}/cards/{cardId}/labels/{labelId}", cardCtrl.RemoveLabel)
+		// r.Post("/boards/{id}/cards/{cardId}/labels/{labelId}", cardCtrl.AddLabel)
+		// r.Delete("/boards/{id}/cards/{cardId}/labels/{labelId}", cardCtrl.RemoveLabel)
 	})
 
 	return r

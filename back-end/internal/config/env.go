@@ -15,4 +15,8 @@ func LoadEnv() {
 	if os.Getenv("DATABASE_URL") == "" {
 		log.Fatal("DATABASE_URL not set")
 	}
+
+	if os.Getenv("JWT_SECRET") == "" {
+		log.Fatal("JWT_SECRET not set")
+	}
 }
